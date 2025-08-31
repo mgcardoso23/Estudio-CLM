@@ -1,0 +1,442 @@
+
+/*Título y logo de la página principal*/
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap'); /*Fuente footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Simonetta:ital,wght@0,400;0,900;1,400;1,900&display=swap'); /*Fuente cuerpo*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px blueviolet;
+    padding: 0.5rem 1rem;
+    background-color: rgb(39, 38, 39);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.inicio {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-left: 35px;
+}
+
+.logo {
+    width: clamp(100px, 14vw, 150px);
+    max-width: 400px;
+    margin-right: 15px;
+} 
+
+
+/* Footer y redes */
+
+.IG{max-width: 60px;}
+
+.TW{max-width: 60px;}
+
+.YT {max-width: 70px;}
+
+.FB {max-width: 60px;}
+
+footer {
+    border: 5px;
+    font-family: Geist;
+    font-size: 15px;
+    color: rgb(255, 255, 255); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: rgb(39, 38, 39);
+}
+
+.encontranos {
+    font-size: 18px;
+    font-family: Geist;
+}
+.spotify {
+    flex: 1;
+    max-width: 45%;
+}
+
+.redes {
+    margin-left: 25px;
+}
+
+.footer-redes img {
+    width: 40px;   
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.footer-redes img:hover {
+    transform: scale(1.2); 
+}
+
+/*titulos de páginas */
+
+h1, h3 {
+    text-align: center;
+    font-size: clamp(28px, 6vw, 50px);
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+    color: rgb(216, 107, 4);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/*Disposición del body*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(223, 220, 218);
+}
+
+.cuerpo {
+    flex: 1;
+}
+
+/* Home Page*/
+
+.portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+}
+
+.mesa {
+    max-width: min(100%, 1200px);
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+}
+
+
+.portada p {
+    font-size: clamp(18px, 4vw, 33px);
+    color:  rgb(0, 0, 0);
+    font-family: Simonetta;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+}
+
+/* Página contactos*/
+
+.contacto-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    min-height: 70vh;
+    box-sizing: border-box;
+}
+
+.ubicacion {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.8rem;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    flex-grow: 1;
+    border-radius: 8px;
+}
+
+.faq {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+details {
+    margin-bottom: 0.5rem;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.datoscontacto {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.datoscontacto form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.6rem;
+}
+
+.datoscontacto form div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.datoscontacto label {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.datoscontacto input,
+.datoscontacto textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+/* Página Galería */
+
+.mostramos {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: clamp(18px, 4.5vw, 33px);
+    color:  rgb(0, 0, 0);
+    margin-bottom: 3rem;
+    font-family: Simonetta;
+}
+
+
+/* Página Quienes Somos */
+
+.quienes1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.quienes1 img.camara {
+    width: 100%;
+    max-width: 5000px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.texto{
+    font-size: clamp(18px, 4.5vw, 33px);
+    color: rgb(0, 0, 0);
+    font-family: Simonetta;
+}
+
+.quienes1 .quienes {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .quienes1 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .quienes1 .somos,
+    .quienes1 .vos {
+        text-align: center;
+    }
+
+    .quienes1 img.camara {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.staff {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-size: clamp(16px, 3.5vw, 25px);
+    color:rgb(216, 107, 4);
+    padding: 0 1rem;
+}
+
+.staff h2 {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+    font-size: clamp(28px, 6vw, 50px);
+}
+
+.staff > div:not(h2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff > div:not(h2) img {
+    width: min(100%, 200px);
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 12px;
+}
+
+.staff > div:not(h2) p {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .staff {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff h2 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Página Servicios */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+}
+
+.servicios section {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 2px 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    min-height: 350px;
+}
+
+.servicios section:hover {
+    transform: scale(1.05);
+}
+
+.servicios section img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.servicios section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.servicios section p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #222;
+}
+
+@media (max-width: 1024px) {
+    .servicios {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+    .contacto-contenedor {
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+    .spotify { max-width: 55%; }
+}
+
+@media (max-width: 768px) {
+    header { padding: 0.5rem 0.75rem; }
+    .pags { gap: 12px; }
+    .contacto-contenedor {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .izquierda, .datoscontacto { width: 100%; }
+    .mapa iframe { min-height: 300px; }
+    .servicios {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    .spotify {
+        max-width: 100%;
+        width: 100%;
+    }
+    .redes { margin-left: 0; }
+}
+
+@media (max-width: 480px) {
+    main { padding: 28px 14px; }
+    .servicios section {
+        max-width: 100%;
+        padding: 16px;
+        min-height: 320px;
+    }
+    .mapa iframe { min-height: 240px; }
+}
